@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  gap: 24px;
+}
+
+.product-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 16px;
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+}
+.product-card--featured {
+  border: 2px solid #e67e22;
+}
+.product-card__image {
+  border-radius: 12px;
+  min-height: 160px;
+  background-image: url("https://static.tildacdn.com/stor3161-3138-4662-b130-623633656538/35409621.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.product-card__content {
+  display: grid;
+  gap: 12px;
+}
+.product-card__title {
+  margin: 0;
+  font-size: 24px;
+}
+.product-card__desc {
+  margin: 0;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+.product-card__footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-card__price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #e67e22;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #e67e22;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+.note {
+  background: #020617;
+  border-radius: 12px;
+  padding: 16px;
+}
+.note__title {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+.note__list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+/*# sourceMappingURL=main.css.map */

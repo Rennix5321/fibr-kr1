@@ -1,0 +1,112 @@
+$color-primary: #e67e22;
+$color-bg: #0f172a;
+$color-surface: #1e293b;
+$color-text: #e2e8f0;
+$radius: 12px;
+$gap: 16px;
+
+@mixin button($bg) {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: $bg;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: $color-bg;
+  color: $color-text;
+}
+
+.page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  gap: 24px;
+}
+
+.product-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: $gap;
+  background: $color-surface;
+  border-radius: $radius;
+  padding: 20px;
+
+  &--featured {
+    border: 2px solid $color-primary;
+  }
+
+    &__image {
+    border-radius: $radius;
+    min-height: 160px;
+
+    background-image: url("https://static.tildacdn.com/stor3161-3138-4662-b130-623633656538/35409621.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__content {
+    display: grid;
+    gap: 12px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  &__desc {
+    margin: 0;
+    line-height: 1.5;
+    opacity: 0.85;
+  }
+
+  &__footer {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    font-size: 22px;
+    font-weight: bold;
+    color: $color-primary;
+  }
+}
+
+.btn {
+  @include button($color-primary);
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.note {
+  background: #020617;
+  border-radius: $radius;
+  padding: 16px;
+
+  &__title {
+    margin: 0 0 8px;
+    font-size: 18px;
+  }
+
+  &__list {
+    margin: 0;
+    padding-left: 18px;
+  }
+}
